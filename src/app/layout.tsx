@@ -1,3 +1,4 @@
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
@@ -16,7 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${font.className} bg-dark-2`}>{children}</body>
+      <ClerkProvider
+        appearance={{
+          layout: {
+            logoImageUrl: '/icons/yoom-logo.svg',
+            socialButtonsVariant: 'iconButton',
+          },
+        }}>
+        <body className={`${font.className} bg-dark-2`}>{children}</body>
+      </ClerkProvider>
     </html>
   );
 }
