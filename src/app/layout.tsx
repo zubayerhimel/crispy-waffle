@@ -1,6 +1,9 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
+
+import { Toaster } from '@/components/ui/toaster';
+
 import './globals.css';
 
 const font = DM_Sans({ subsets: ['latin'] });
@@ -24,7 +27,10 @@ export default function RootLayout({
             socialButtonsVariant: 'iconButton',
           },
         }}>
-        <body className={`${font.className} bg-dark-2`}>{children}</body>
+        <body className={`${font.className} bg-dark-2`}>
+          {children}
+          <Toaster />
+        </body>
       </ClerkProvider>
     </html>
   );
