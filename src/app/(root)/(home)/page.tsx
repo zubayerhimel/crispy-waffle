@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 
+import MeetingTypeList from '@/components/application/meeting-type-list';
+
 const Home = () => {
   const dateTime = new Date();
 
@@ -14,6 +16,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <MeetingTypeList />
     </section>
   );
 };
