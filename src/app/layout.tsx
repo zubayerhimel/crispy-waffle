@@ -4,6 +4,7 @@ import { DM_Sans } from 'next/font/google';
 
 import { Toaster } from '@/components/ui/toaster';
 
+import '@stream-io/video-react-sdk/dist/css/styles.css';
 import './globals.css';
 
 const font = DM_Sans({ subsets: ['latin'] });
@@ -11,9 +12,12 @@ const font = DM_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Yoom',
   description: 'Steaming application to handle your day to day meetings',
+  icons: {
+    icon: '/icons/logo.svg',
+  },
 };
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
