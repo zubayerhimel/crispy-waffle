@@ -5,6 +5,7 @@ import { DM_Sans } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
 
 import '@stream-io/video-react-sdk/dist/css/styles.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import './globals.css';
 
 const font = DM_Sans({ subsets: ['latin'] });
