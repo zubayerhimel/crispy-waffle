@@ -1,9 +1,8 @@
 "use client";
 
 import { useUser } from "@clerk/nextjs";
-import { useStreamVideoClient } from "@stream-io/video-react-sdk";
+import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
-import { Call } from "@stream-io/node-sdk";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 
