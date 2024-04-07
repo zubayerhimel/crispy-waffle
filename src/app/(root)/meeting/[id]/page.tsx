@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useUser } from '@clerk/nextjs';
-import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
-import { useState } from 'react';
+import { useUser } from "@clerk/nextjs";
+import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+import { useState } from "react";
 
-import MeetingRoom from '@/components/application/meeting-room';
-import MeetingSetup from '@/components/application/meeting-setup';
-import { useGetCallById } from '@/hooks/use-get-call-by-id';
-import Loader from '@/components/application/loader';
+import Loader from "@/components/application/loader";
+import MeetingRoom from "@/components/application/meeting-room";
+import MeetingSetup from "@/components/application/meeting-setup";
+import { useGetCallById } from "@/hooks/use-get-call-by-id";
 
-const meetings = ({ params: { id } }: { params: { id: string } }) => {
-  const { user, isLoaded } = useUser();
+const Meetings = ({ params: { id } }: { params: { id: string } }) => {
+  const { isLoaded } = useUser();
 
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   const { call, isCallLoading } = useGetCallById(id);
@@ -28,4 +28,4 @@ const meetings = ({ params: { id } }: { params: { id: string } }) => {
   );
 };
 
-export default meetings;
+export default Meetings;
