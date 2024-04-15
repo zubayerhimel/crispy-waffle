@@ -33,7 +33,7 @@ const CallList = ({ type }: CallListProps) => {
     } catch (error) {
       toast({ title: "Try again later" });
     }
-  }, [type, callRecordings]);
+  }, [toast, type, callRecordings]);
 
   const getCalls = () => {
     switch (type) {
