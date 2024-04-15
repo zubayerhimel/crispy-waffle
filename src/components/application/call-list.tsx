@@ -69,7 +69,7 @@ const CallList = ({ type }: CallListProps) => {
   }
 
   return (
-    <div className='grid grid-cols-1 gap-5 xl:grid-cols-2'>
+    <div className='grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3'>
       {calls && calls.length > 0 ? (
         calls.map((meeting: Call | CallRecording) => (
           <MeetingCard
